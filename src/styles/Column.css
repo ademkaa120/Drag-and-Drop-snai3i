@@ -1,0 +1,175 @@
+.column {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.column:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.column-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column-title {
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.task-count {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tasks-list {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tasks-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tasks-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tasks-list::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.tasks-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.task-wrapper {
+  transition: all 0.3s ease;
+}
+
+.task-wrapper.drag-over {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 8px;
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.add-task-form {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px dashed #667eea;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.task-input:focus {
+  border-color: #667eea;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-confirm,
+.btn-cancel {
+  flex: 1;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 12px;
+}
+
+.btn-confirm {
+  background: #2ed573;
+  color: white;
+}
+
+.btn-confirm:hover {
+  background: #27ae60;
+  transform: scale(1.05);
+}
+
+.btn-cancel {
+  background: #ff4757;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background: #ee5a6f;
+  transform: scale(1.05);
+}
+
+.btn-add-task {
+  margin: 10px 15px 15px 15px;
+  padding: 10px 16px;
+  background: white;
+  border: 2px dashed #667eea;
+  border-radius: 8px;
+  color: #667eea;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btn-add-task:hover {
+  background: #667eea;
+  color: white;
+  border-style: solid;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .column {
+    min-height: 400px;
+  }
+
+  .tasks-list {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .column-title {
+    font-size: 16px;
+  }
+}
